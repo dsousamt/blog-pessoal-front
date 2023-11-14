@@ -1,6 +1,6 @@
 import CardTemas from "../cardTemas/CardTemas";
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Dna } from 'react-loader-spinner';
 
 import { buscar } from '../../../services/Service';
@@ -57,7 +57,7 @@ function ListaTemas() {
           />
       )}
 
-      <div className="flex justify-center w-full my-4">
+      <div className="justify-center w-full my-4 flex">
           <div className="container flex flex-col">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {temas.map((tema) => (
@@ -67,6 +67,13 @@ function ListaTemas() {
                 ))}
               </div>
           </div>
+      </div>
+      <div className="justify-center w-full my-4 flex">
+            <Link to='/cadastroTema' className='
+            rounded text-slate-100 bg-indigo-400 
+            hover:bg-indigo-800 w-1/2 py-2 mx-auto block text-center'>
+                Cadastrar Novo Tema
+            </Link>
       </div>
     </>
   )
