@@ -1,4 +1,4 @@
-import { FormEvent, ChangeEvent, useContext, useState, useEffect} from 'react';
+import { ChangeEvent, useContext, useState, useEffect} from 'react';
 import './Login.css'
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../contexts/AuthContext';
@@ -6,7 +6,7 @@ import UsuarioLogin from "../../models/UsuarioLogin";
 import { RotatingLines } from 'react-loader-spinner';
 import BaseInput from '../../components/input/baseInput/BaseInput';
 import Button from '../../components/button/Button';
-import { toastAlerta } from '../../utils/toastAlerta';
+
 function Login() {
     
     const navigate = useNavigate()
